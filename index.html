@@ -1,0 +1,338 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link type="text/css" href="alpaca.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script type="text/javascript" src="alpaca.js"></script>
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: "Montserrat";
+      }
+      #form {
+        background: #eee;
+      }
+      .personnageDiv {
+        background: #d3d3d3;
+      }
+    </style>
+    <div class="container">
+      <h1>Générateur de dialogues</h1>
+      <br>
+      <div id="form"></div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#form").alpaca({
+          "data": {
+            "paramCSS": {},
+            "sources": [
+              {
+                "id": 0,
+                "src": "img/NormalFille.png"
+              }, {
+                "id": 1,
+                "src": "img/NormalGars.png"
+              }, {
+                "id": 2,
+                "src": "img/ContentFille.png"
+              }, {
+                "id": 3,
+                "src": "img/ContentGars.png"
+              }, {
+                "id": 4,
+                "src": "img/background.png"
+              }, {
+                "id": 5,
+                "src": "img/bouche.png"
+              }, {
+                "id": 6,
+                "src": "img/prof_1.png"
+              }
+            ],
+            "characters": [
+              {
+                "id": 0,
+                "default": 6,
+                "mouth": {
+                  "positions": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "nbImg": 4,
+                  "imageId": 5
+                },
+                "defaultName": "Joe"
+              }, {
+                "id": 1,
+                "defaultName": "Interlocutrice",
+                "default": 0,
+                "mouth": {
+                  "positions": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "nbImg": 4,
+                  "imageId": 5
+                }
+              }, {
+                "id": 2,
+                "defaultName": "L'Homme Vraiment Perdu",
+                "default": 1,
+                "mouth": {
+                  "positions": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "nbImg": 4,
+                  "imageId": 5
+                }
+              }
+            ],
+            "background": 4,
+            "lines": [
+              {
+                "id": 0,
+                "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptate",
+                "perso": 1,
+                "animation": "bounceIn",
+                "name": "L'Homme Perdu"
+              }, {
+                "id": 1,
+                "text": "Oui, allo, bonjour. Je vous appelle parce que je me suis baladé dans le désert et je me suis perdu.",
+                "perso": 2,
+                "image": 1,
+                "animation": "bounceIn",
+                "name": "L'Homme Perdu"
+              }, {
+                "id": 2,
+                "text": "Humm... oui ce problème est récurrent....",
+                "perso": 1,
+                "animation": "bounce",
+                "name": "L'Homme Perdu"
+              }, {
+                "id": 3,
+                "text": "Bah écoutez, passez une bonne journée !",
+                "perso": 1,
+                "animation": "bounceOut",
+                "name": "L'Homme Perdu"
+              }, {
+                "id": 4,
+                "text": "Merci ! Au revoir !",
+                "perso": 2,
+                "image": 3,
+                "animation": "bounceOut",
+                "name": "L'Homme perdu"
+              }
+            ]
+          },
+          "schema": {
+            "type": "object",
+            "properties": {
+              "paramCSS": {
+                "type": "object",
+                "title": "ParamCSS"
+              },
+              "sources": {
+                "type": "array",
+                "title": "Sources",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "src": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "background": {
+                "type": "integer",
+                "minimum": 0,
+                "title": "Arriere-plan"
+              },
+              "characters": {
+                "type": "array",
+                "title": "Liste des personnages",
+                "items": {
+                  "type": "object",
+                  "fieldClass": "personnage",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "Id du personnage"
+                    },
+                    "defaultName": {
+                      "title": "Nom par défaut",
+                      "type": "string"
+                    },
+                    "mouth": {
+                      "title": "Image-bouche",
+                      "type": "object",
+                      "properties": {
+                        "imageId": {
+                          "title": "Image utilisée",
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "positions": {
+                          "type": "object",
+                          "title": "Position de l'image",
+                          "properties": {
+                            "x": {
+                              "type": "number",
+                              "title": "Position x",
+                              "minimum": 0
+                            },
+                            "y": {
+                              "type": "number",
+                              "title": "Position y",
+                              "minimum": 0
+                            }
+                          }
+                        },
+                        "nbImg": {
+                          "title": "Nombre d'images",
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "lines": {
+                "type": "array",
+                "title": "Répliques",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "title": "Texte"
+                    },
+                    "perso": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "Personnage"
+                    },
+                    "image": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "title": "Image"
+                    },
+                    "animation": {
+                      "type": "string",
+                      "title": "Animation"
+                    },
+                    "name": {
+                      "type": "string",
+                      "title": "Nom"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "options": {
+            "fields": {
+              "paramCSS": {
+                "hidden": "true"
+              },
+              "sources": {
+                "hidden": "true"
+              },
+              "background": {
+                "fieldClass": "background",
+                "type": "image",
+                "label": "Image"
+              },
+              "characters": {
+                "items": {
+                  "fieldClass": "personnageDiv",
+                  "fields": {
+                    "id": {
+                      "hidden": "true"
+                    },
+                    "mouth": {
+                      "fields": {
+                        "nbImg": {
+                          "hidden": "true"
+                        },
+                        "imageId": {
+                          "fieldClass": "imageBouche",
+                          "type": "image",
+                          "label": "Image"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "lines": {
+                "fieldClass": "lines",
+                "items": {
+                  "fieldClass": "line",
+                  "fields": {
+                    "perso": {
+                      "fieldClass": "imagePerso",
+                      "type": "image",
+                      "label": "Image"
+                    }
+                  }
+                }
+              }
+            },
+            "form": {
+              "attributes": {
+                "action": "http://httpbin.org/post",
+                "method": "post"
+              },
+              "buttons": {
+                "submit": {
+                  "title": "Valider",
+                  "click": function () {
+                    var value = this.getValue();
+                    alert(JSON.stringify(value, null, "  "));
+                  }
+                }
+              }
+            }
+          },
+          "view": "bootstrap-edit",
+          "postRender": function (control) {
+            var dialoguesLength = $(".lines .alpaca-container");
+            for (var i = 0; i < dialoguesLength.attr("data-alpaca-container-item-count"); i++) {
+              var dialogues = $("div[data-alpaca-container-item-name='lines'] div[data-alpaca-container-item-name='lines_" + i + "']");
+              dialogues.css({width: "49%", background: "#27ae60"});
+              var dialoguesPerso = $("div[data-alpaca-container-item-name='lines'] div[data-alpaca-container-item-name='lines_" + i + "_perso'] input");
+              if (dialoguesPerso.val() == "2") {
+                dialogues.css({"margin-left": "51%", background: "#3498db", transition: "0.2s"});
+              };
+              $("input[name='lines_" + i + "_perso']").on("change paste keyup", function () {
+                if ($(this).val() == "2") {
+                  $(this).closest($("div[data-alpaca-container-item-parent-field-id='alpaca55']")).css({"margin-left": "51%", background: "#3498db", transition: "0.2s"});
+                } else if ($(this).val() == "1") {
+                  $(this).closest($("div[data-alpaca-container-item-parent-field-id='alpaca55']")).css({"margin-left": "0%", background: "#27ae60", transition: "0.2s"});
+                }
+              });
+            };
+            $("img").addClass("img-responsive");
+            var imagePersonnage = $(".imagePerso img")
+            imagePersonnage.attr("src", "img/ContentGars.png");
+            $(".imageBouche img").attr("src", "img/bouche.png");
+            $(".background img").attr("src", "img/background.png").css("width", "60%");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
