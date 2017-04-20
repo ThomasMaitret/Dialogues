@@ -19,6 +19,18 @@
       .personnageDiv {
         background: #d3d3d3;
       }
+      .line {
+        width: 49%;
+        transition: 0.2s;
+      }
+      .perso1 {
+        margin-left: 0;
+        background: #27ae60;
+      }
+      .perso2 {
+        margin-left: 51%;
+        background: #3498db;
+      }
     </style>
     <div class="container">
       <h1>Générateur de dialogues</h1>
@@ -282,10 +294,12 @@
                 "items": {
                   "fieldClass": "line",
                   "fields": {
-                    "perso": {
+                    "image": {
                       "fieldClass": "imagePerso",
-                      "type": "image",
-                      "label": "Image"
+                      "type": "image"
+                    },
+                    "perso": {
+                      "fieldClass": "perso"
                     }
                   }
                 }
@@ -309,19 +323,20 @@
           },
           "view": "bootstrap-edit",
           "postRender": function (control) {
-            var dialoguesLength = $(".lines .alpaca-container");
-            for (var i = 0; i < dialoguesLength.attr("data-alpaca-container-item-count"); i++) {
-              var dialogues = $("div[data-alpaca-container-item-name='lines'] div[data-alpaca-container-item-name='lines_" + i + "']");
-              dialogues.css({width: "49%", background: "#27ae60"});
-              var dialoguesPerso = $("div[data-alpaca-container-item-name='lines'] div[data-alpaca-container-item-name='lines_" + i + "_perso'] input");
-              if (dialoguesPerso.val() == "2") {
-                dialogues.css({"margin-left": "51%", background: "#3498db", transition: "0.2s"});
+            var lineLength = $(".lines .alpaca-container");
+            for (var i = 0; i < lineLength.attr("data-alpaca-container-item-count"); i++) {
+              var line = $(".line");
+              var persoInput = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_perso'] input");
+              if (persoInput.val() == "1") {
+                persoInput.closest($(".line")).removeClass("perso2").addClass("perso1");
+              } else if (persoInput.val() == "2") {
+                persoInput.closest($(".line")).removeClass("perso1").addClass("perso2");
               };
-              $("input[name='lines_" + i + "_perso']").on("change paste keyup", function () {
-                if ($(this).val() == "2") {
-                  $(this).closest($("div[data-alpaca-container-item-parent-field-id='alpaca55']")).css({"margin-left": "51%", background: "#3498db", transition: "0.2s"});
-                } else if ($(this).val() == "1") {
-                  $(this).closest($("div[data-alpaca-container-item-parent-field-id='alpaca55']")).css({"margin-left": "0%", background: "#27ae60", transition: "0.2s"});
+              persoInput.on("change paste keyup", function () {
+                if ($(this).val() == "1") {
+                  $(this).closest($(".line")).removeClass("perso2").addClass("perso1");
+                } else if ($(this).val() == "2") {
+                  $(this).closest($(".line")).removeClass("perso1").addClass("perso2");
                 }
               });
             };
