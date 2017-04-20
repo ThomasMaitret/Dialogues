@@ -9352,7 +9352,8 @@
 							var a = this.view.getTemplateDescriptor("control-" + i.getFieldType(), e);
 							a ? (n = i.getFieldType(), t = !0) : i = i.constructor.ancestor.prototype
 						}
-					else t = !0; while (!t);
+					else t = !0;
+					while(!t);
 					return n
 				},
 				onSetup: function() {},
@@ -9812,7 +9813,8 @@
 							var i = this.view.getTemplateDescriptor("container-" + n.getFieldType(), this);
 							i ? (t = n.getFieldType(), e = !0) : n = n.constructor.ancestor.prototype
 						}
-					else e = !0; while (!e);
+					else e = !0;
+					while(!e);
 					return t
 				},
 				resolveContainerItemTemplateType: function()
@@ -9826,7 +9828,8 @@
 							var i = this.view.getTemplateDescriptor("container-" + n.getFieldType() + "-item", this);
 							i ? (t = n.getFieldType(), e = !0) : n = n.constructor.ancestor.prototype
 						}
-					else e = !0; while (!e);
+					else e = !0;
+					while(!e);
 					return t
 				},
 				setup: function()
@@ -12479,7 +12482,7 @@
 								var a = n.children[i];
 								e.length > i ? (a.setValue(e[i]), i++) : n.removeItem(i)
 							}
-						while(i < n.children.length);
+						while (i < n.children.length);
 						i < e.length && n.resolveItemSchemaOptions(function(a, r, o)
 						{
 							if(a || t.logDebug("Unable to resolve schema for item: " + i), o) return t.throwErrorWithCallback("Circular reference detected for schema: " + JSON.stringify(a), n.errorCallback);
@@ -17533,7 +17536,7 @@
 									s && (e = e.substring(0, a) + s + e.substring(o + 1)), r = o + 1
 								}
 							}
-						while(a > -1);
+						while (a > -1);
 						return e
 					},
 					applyConfiguration: function(e) {},

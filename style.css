@@ -1,21 +1,26 @@
 body {
   font-family: "Montserrat";
 }
+
 #form {
   background: #eee;
 }
+
 .personnageDiv {
   background: #d3d3d3;
 }
+
 .line {
-  width: 49%;
-  transition: 0.2s;
+  width     : 49%;
+  transition: .2s;
 }
+
 .perso1 {
   margin-left: 0;
-  background: #27ae60;
+  background : #27ae60;
 }
+
 .perso2 {
   margin-left: 51%;
-  background: #3498db;
+  background : #3498db;
 }
