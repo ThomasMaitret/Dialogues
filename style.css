@@ -7,7 +7,7 @@ body {
 }
 
 .personnageDiv {
-  background: #d3d3d3;
+  background: #BFBFBF;
 }
 
 .perso1 {
@@ -22,4 +22,8 @@ body {
   background : #3498db;
   width      : 49%;
   transition : .1s;
+}
+
+legend {
+  border-color: #333;
 }

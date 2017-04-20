@@ -2098,7 +2098,7 @@
 					fn: e.program(9, a, 0),
 					inverse: e.noop,
 					data: a
-				})) ? r : "") + '/>\n\n    <div class="alpaca-image-display">\n        <h5>Preview</h5>\n        <img id="' + c((o = null != (o = n.id || (null != t ? t.id : t)) ? o : s, typeof o === u ? o.call(l,
+				})) ? r : "") + '/>\n\n    <div class="alpaca-image-display">\n        <h5>Aperçu</h5>\n        <img id="' + c((o = null != (o = n.id || (null != t ? t.id : t)) ? o : s, typeof o === u ? o.call(l,
 				{
 					name: "id",
 					hash:
