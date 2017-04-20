@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <title>Générateur de dialogues</title>
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link type="text/css" href="alpaca.css" rel="stylesheet"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -328,15 +329,15 @@
               var line = $(".line");
               var persoInput = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_perso'] input");
               if (persoInput.val() == "1") {
-                persoInput.closest($(".line")).removeClass("perso2").addClass("perso1");
+                persoInput.closest(line).removeClass("perso2").addClass("perso1");
               } else if (persoInput.val() == "2") {
-                persoInput.closest($(".line")).removeClass("perso1").addClass("perso2");
+                persoInput.closest(line).removeClass("perso1").addClass("perso2");
               };
               persoInput.on("change paste keyup", function () {
                 if ($(this).val() == "1") {
-                  $(this).closest($(".line")).removeClass("perso2").addClass("perso1");
+                  $(this).closest(line).removeClass("perso2").addClass("perso1");
                 } else if ($(this).val() == "2") {
-                  $(this).closest($(".line")).removeClass("perso1").addClass("perso2");
+                  $(this).closest(line).removeClass("perso1").addClass("perso2");
                 }
               });
             };
