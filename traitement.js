@@ -89,21 +89,18 @@ $(document).ready(function()
 			});
 			$("img").addClass("img-responsive");
 
-			$(".alpaca-container").sortable(
+			$(".line").closest(".alpaca-container").sortable(
 			{
 				scroll: true
 			});
 
 			$(".closeButton").each(function()
 			{
-				$(this).click(function()
+				$(this).click(function(e)
 				{
-
+					e.preventDefault();
 					$(this).closest(".alpaca-container-item")
-						.fadeOut("fast", function()
-						{
-							$(this).remove();
-						});
+						.hide();
 				});
 			});
 		}
