@@ -13,6 +13,7 @@ $(document).ready(function()
 			{
 				var line = $(".line").parent();
 				var persoInput = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_perso'] input");
+				var persoImage = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_image'] input");
 				if(persoInput.val() == "1")
 				{
 					persoInput.closest(line).removeClass("perso2").addClass("perso1");
@@ -31,6 +32,11 @@ $(document).ready(function()
 					{
 						$(this).closest(line).removeClass("perso1").addClass("perso2");
 					}
+				});
+				persoImage.on("change paste keyup", function()
+				{
+					var i = $(this).val();
+					$(".imagePerso img").attr("src", JSONDATA["sources"][i].src);
 				});
 			};
 
