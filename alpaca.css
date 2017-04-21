@@ -246,8 +246,7 @@ legend.alpaca-container-label {
 }
 
 .alpaca-field-object {
-  border-radius: 5px;
-  padding      : 20px;
+  padding: 20px;
 }
 
 .alpaca-container-item:not(:first-child),

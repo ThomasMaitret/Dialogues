@@ -82,6 +82,7 @@ JSONDATA = {
 		"id": 0,
 		"text": "Sed ut perspiciatis unde omnis iste natus error sit voluptate",
 		"perso": 1,
+		"image": 1,
 		"animation": "bounceIn",
 		"name": "L'Homme Perdu"
 	},
@@ -89,7 +90,7 @@ JSONDATA = {
 		"id": 1,
 		"text": "Oui, allo, bonjour. Je vous appelle parce que je me suis baladé dans le désert et je me suis perdu.",
 		"perso": 2,
-		"image": 1,
+		"image": 2,
 		"animation": "bounceIn",
 		"name": "L'Homme Perdu"
 	},
@@ -97,6 +98,7 @@ JSONDATA = {
 		"id": 2,
 		"text": "Humm... oui ce problème est récurrent....",
 		"perso": 1,
+		"image": 3,
 		"animation": "bounce",
 		"name": "L'Homme Perdu"
 	},
@@ -104,6 +106,7 @@ JSONDATA = {
 		"id": 3,
 		"text": "Bah écoutez, passez une bonne journée !",
 		"perso": 1,
+		"image": 3,
 		"animation": "bounceOut",
 		"name": "L'Homme Perdu"
 	},
@@ -111,7 +114,7 @@ JSONDATA = {
 		"id": 4,
 		"text": "Merci ! Au revoir !",
 		"perso": 2,
-		"image": 3,
+		"image": 0,
 		"animation": "bounceOut",
 		"name": "L'Homme perdu"
 	}]
@@ -277,8 +280,7 @@ JSONOPTIONS = {
 		"background":
 		{
 			"fieldClass": "background",
-			"type": "image",
-			"label": "Image"
+			"type": "image"
 		},
 		"characters":
 		{
@@ -320,16 +322,16 @@ JSONOPTIONS = {
 				{
 					"image":
 					{
-						"fieldClass": "imagePerso",
-						"type": "image"
+						"fieldClass": "imagePerso"
 					},
 					"perso":
 					{
 						"fieldClass": "perso"
 					},
-          "text": {
-            "type":"textarea"
-          }
+					"text":
+					{
+						"type": "textarea"
+					}
 				}
 			}
 		}
