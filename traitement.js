@@ -48,21 +48,18 @@ $(document).ready(function()
 
 				$(this).find(".imagePerso").append(div);
 			});
-
-			$(".background").each(function()
+			$(".personnageDiv").each(function()
 			{
-				var div = $("<br><div><label>Aperçu</label><br>");
-				var i = $(this).find("input").val();
+				var div = $("<div>");
+				var i = $(this).find(".imageBouche input").val();
 				var img = $("<img>",
 				{
 					src: JSONDATA["sources"][i].src
 				});
 				img.appendTo(div);
-
-				$(this).find("input").append(div);
+				$(this).find(".imageBouche").append(div);
 			});
-
-			$(".imageBouche img").attr("src", "img/bouche.png");
+			$("img").addClass("img-responsive");
 			$(".background img").attr("src", "img/background.png").css("width", "60%");
 		}
 	});
