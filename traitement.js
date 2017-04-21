@@ -53,7 +53,7 @@ $(document).ready(function()
 				$(".background").append(div);
 			})();
 
-			$(".background").find("input").on("change", function()
+			$(".background").find("input").on("change paste keyup", function()
 			{
 				$(".background").first().find("img").attr("src", JSONDATA["sources"][$(this).val()].src);
 			});
