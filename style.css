@@ -22,16 +22,20 @@ textarea {
   margin-left: 0;
   background : #27ae60;
   width      : 49%;
-  transition : .1s;
+  transition : .15s;
 }
 
 .perso2 {
   margin-left: 51%;
   background : #3498db;
   width      : 49%;
-  transition : .1s;
+  transition : .15s;
 }
 
 legend {
   border-color: #333;
+}
+
+.background img {
+  width: 60%;
 }
