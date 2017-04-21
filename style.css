@@ -39,4 +39,5 @@ legend {
 
 .background img {
   width: 60%;
+  max-height: 500px;
 }
