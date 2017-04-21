@@ -41,8 +41,8 @@ $(document).ready(function()
 			};
 
 			//BACKGROUND
-
-			(function() {
+			(function()
+			{
 				var i = $(".background").find("input").val();
 				var div = $("<br><div><label>Aperçu</label><br>");
 				var img = $("<img>",

@@ -19179,7 +19179,7 @@
 		{
 			var t = e.alpaca,
 				n = {};
-			n.button = "btn btn-default", n.smallButton = "btn btn-default btn-sm", n.addIcon = "glyphicon glyphicon-plus-sign", n.removeIcon = "glyphicon glyphicon-minus-sign", n.upIcon = "glyphicon glyphicon-chevron-up", n.downIcon = "glyphicon glyphicon-chevron-down", n.expandedIcon = "glyphicon glyphicon-circle-arrow-down", n.collapsedIcon = "glyphicon glyphicon-circle-arrow-right", n.table = "table table-striped table-bordered table-hover";
+			n.button = "btn btn-default", n.smallButton = "btn btn-default btn-sm", n.addIcon = "glyphicon glyphicon-plus", n.removeIcon = "glyphicon glyphicon-remove", n.upIcon = "glyphicon glyphicon-chevron-up", n.downIcon = "glyphicon glyphicon-chevron-down", n.expandedIcon = "glyphicon glyphicon-circle-arrow-down", n.collapsedIcon = "glyphicon glyphicon-circle-arrow-right", n.table = "table table-striped table-bordered table-hover";
 			var i = {};
 			i.required = function()
 			{

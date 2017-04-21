@@ -245,8 +245,18 @@ legend.alpaca-container-label {
   overflow: hidden;
 }
 
+.alpaca-array-actionbar-action {
+  border-radius: 0;
+  border       : none;
+  padding      : 10px 15px;
+}
+
+.alpaca-array-actionbar-action i {
+  font-size: 1.2em;
+}
+
 .alpaca-field-object {
-  padding: 20px;
+  padding: 25px 20px;
 }
 
 .alpaca-container-item:not(:first-child),
