@@ -243,6 +243,7 @@ legend.alpaca-container-label {
 
 .alpaca-array-actionbar {
   overflow: hidden;
+  display : none !important;
 }
 
 .alpaca-array-actionbar-action {

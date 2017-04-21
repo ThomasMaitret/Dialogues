@@ -333,25 +333,5 @@ JSONOPTIONS = {
 				}
 			}
 		}
-	},
-	"form":
-	{
-		"attributes":
-		{
-			"action": "http://httpbin.org/post",
-			"method": "post"
-		},
-		"buttons":
-		{
-			"submit":
-			{
-				"title": "Valider",
-				"click": function()
-				{
-					var value = this.getValue();
-					alert(JSON.stringify(value, null, "  "));
-				}
-			}
-		}
 	}
 };

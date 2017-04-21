@@ -13194,9 +13194,9 @@
 				notAnArray: "This value is not an Array"
 			}), t.registerFieldClass("array", t.Fields.ArrayField), t.registerDefaultSchemaFieldMapping("array", "array"), t.registerMessages(
 			{
-				addItemButtonLabel: "Add New Item",
-				addButtonLabel: "Add",
-				removeButtonLabel: "Remove",
+				addItemButtonLabel: "Ajouter un élément",
+				addButtonLabel: "Ajouter",
+				removeButtonLabel: "Supprimer",
 				upButtonLabel: "Up",
 				downButtonLabel: "Down"
 			})

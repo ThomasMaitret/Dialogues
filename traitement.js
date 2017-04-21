@@ -85,6 +85,28 @@ $(document).ready(function()
 				$(this).find(".imageBouche").append(div);
 			});
 			$("img").addClass("img-responsive");
+
+			/* $("button").click(function()
+			{
+				setTimeout(function()
+				{
+					var lineLength = $(".lines .alpaca-container");
+					for(var i = 0; i < lineLength.attr("data-alpaca-container-item-count"); i++)
+					{
+						var line = $(".line").parent();
+						var persoInput = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_perso'] input");
+						var persoImage = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_image'] input");
+						if(persoInput.val() == "1")
+						{
+							persoInput.closest(line).removeClass("perso2").addClass("perso1");
+						}
+						else if(persoInput.val() == "2")
+						{
+							persoInput.closest(line).removeClass("perso1").addClass("perso2");
+						};
+					};
+				}, 1000)
+			}) */
 		}
 	});
 });
