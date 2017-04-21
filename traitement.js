@@ -41,6 +41,7 @@ $(document).ready(function()
 			};
 
 			//BACKGROUND
+			var setBackground = new function()
 			{
 				var i = $(".background").find("input").val();
 				var div = $("<br><div><label>Aperçu</label><br>");
@@ -52,7 +53,8 @@ $(document).ready(function()
 				$(".background").append(div);
 			}
 
-			$(".background").find("input").on("change", function() {
+			$(".background").find("input").on("change", function()
+			{
 				$(".background").first().find("img").attr("src", JSONDATA["sources"][$(this).val()].src);
 			});
 
