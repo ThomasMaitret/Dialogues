@@ -47,6 +47,19 @@ $(document).ready(function()
 				$(this).find(".imagePerso").append(div);
 			});
 
+			$(".personnageDiv").each(function()
+			{
+				var div = $("<div>");
+				var i = $(this).find(".imageBouche input").val();
+				var img = $("<img>",
+				{
+					src: JSONDATA["sources"][i].src
+				});
+				img.appendTo(div);
+
+				$(this).find(".imageBouche").append(div);
+			});
+
 			$("img").addClass("img-responsive");
 
 			$(".imageBouche img").attr("src", "img/bouche.png");

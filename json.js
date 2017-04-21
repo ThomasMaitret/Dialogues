@@ -304,7 +304,6 @@ JSONOPTIONS = {
 							"imageId":
 							{
 								"fieldClass": "imageBouche",
-								"type": "image",
 								"label": "Image"
 							}
 						}
