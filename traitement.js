@@ -100,7 +100,10 @@ $(document).ready(function()
 				{
 					e.preventDefault();
 					$(this).closest(".alpaca-container-item")
-						.hide();
+						.fadeOut(50, function()
+						{
+							$(this).remove();
+						});
 				});
 			});
 		}
