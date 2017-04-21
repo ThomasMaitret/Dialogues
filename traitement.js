@@ -34,7 +34,7 @@ $(document).ready(function()
 				});
 			};
 			$("img").addClass("img-responsive");
-			var imagePersonnage = $(".imagePerso img")
+			var imagePersonnage = $(".imagePerso img");
 			imagePersonnage.attr("src", "img/ContentGars.png");
 			$(".imageBouche img").attr("src", "img/bouche.png");
 			$(".background img").attr("src", "img/background.png").css("width", "60%");

@@ -252,7 +252,7 @@ legend.alpaca-container-label {
 
 .alpaca-container-item:not(:first-child),
 .alpaca-control-buttons-container {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .alpaca-field-array {
