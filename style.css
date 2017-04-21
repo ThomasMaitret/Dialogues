@@ -2,6 +2,10 @@ body {
   font-family: "Montserrat";
 }
 
+textarea {
+    resize: none;
+}
+
 #form {
   background: #eee;
 }

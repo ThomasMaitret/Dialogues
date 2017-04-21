@@ -326,7 +326,10 @@ JSONOPTIONS = {
 					"perso":
 					{
 						"fieldClass": "perso"
-					}
+					},
+          "text": {
+            "type":"textarea"
+          }
 				}
 			}
 		}
