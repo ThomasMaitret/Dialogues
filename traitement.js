@@ -92,7 +92,9 @@ $(document).ready(function()
 			$(".line").closest(".alpaca-container").sortable(
 			{
 				scrollSpeed: 10,
-				containment: ".alpaca-container"
+				containment: ".alpaca-container",
+				axis: "y",
+				revert: true
 			});
 
 			$(".closeButton").each(function()
