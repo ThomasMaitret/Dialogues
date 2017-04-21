@@ -62,7 +62,6 @@ $(document).ready(function()
 
 			$("img").addClass("img-responsive");
 
-			$(".imageBouche img").attr("src", "img/bouche.png");
 			$(".background img").attr("src", "img/background.png").css("width", "60%");
 		}
 	});
