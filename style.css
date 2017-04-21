@@ -11,20 +11,23 @@ textarea {
 }
 
 .personnageDiv {
-  background: #d3d3d3;
-}
-
-.line {
-  width     : 49%;
-  transition: .2s;
+  background: #BFBFBF;
 }
 
 .perso1 {
   margin-left: 0;
   background : #27ae60;
+  width      : 49%;
+  transition : .1s;
 }
 
 .perso2 {
   margin-left: 51%;
   background : #3498db;
+  width      : 49%;
+  transition : .1s;
+}
+
+legend {
+  border-color: #333;
 }
