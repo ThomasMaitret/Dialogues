@@ -34,17 +34,24 @@ $(document).ready(function()
 				});
 			};
 
-			$(".background").each(function()
+			//BACKGROUND
 			{
+				var i = $(".background").find("input").val();
 				var div = $("<br><div><label>Aperçu</label><br>");
-				var i = $(this).find("input").val();
 				var img = $("<img>",
 				{
 					src: JSONDATA["sources"][i].src
 				});
 				img.appendTo(div);
-				$(this).append(div);
+				$(".background").append(div);
+			}
+
+			$(".background").find("input").on("change", function() {
+				$(".background").first().find("img").attr("src", JSONDATA["sources"][$(this).val()].src);
 			});
+
+			//--------------------------------
+
 			$(".line").each(function()
 			{
 				var div = $("<br><div><label>Aperçu</label><br>");
@@ -69,7 +76,6 @@ $(document).ready(function()
 				$(this).find(".imageBouche").append(div);
 			});
 			$("img").addClass("img-responsive");
-			$(".background img").attr("src", "img/background.png").css("width", "60%");
 		}
 	});
 });
