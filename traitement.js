@@ -42,12 +42,13 @@ $(document).ready(function()
 				{
 					src: JSONDATA["sources"][i].src
 				});
-				img.appendTo
+				img.appendTo(div);
 
-				$(".imagePerso").append($("<div>"));
+				$(this).find(".imagePerso").append(div);
 			});
 
 			$("img").addClass("img-responsive");
+
 			$(".imageBouche img").attr("src", "img/bouche.png");
 			$(".background img").attr("src", "img/background.png").css("width", "60%");
 		}
