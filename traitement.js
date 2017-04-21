@@ -34,9 +34,11 @@ $(document).ready(function()
 				});
 			};
 
+			$("img").addClass("img-responsive");
+
 			$(".line").each(function()
 			{
-				var div = $("<div>");
+				var div = $("<br><div><label>Aperçu</label><br>");
 				var i = $(this).find(".imagePerso input").val();
 				var img = $("<img>",
 				{
@@ -47,7 +49,18 @@ $(document).ready(function()
 				$(this).find(".imagePerso").append(div);
 			});
 
-			$("img").addClass("img-responsive");
+			$(".background").each(function()
+			{
+				var div = $("<br><div><label>Aperçu</label><br>");
+				var i = $(this).find("input").val();
+				var img = $("<img>",
+				{
+					src: JSONDATA["sources"][i].src
+				});
+				img.appendTo(div);
+
+				$(this).find("input").append(div);
+			});
 
 			$(".imageBouche img").attr("src", "img/bouche.png");
 			$(".background img").attr("src", "img/background.png").css("width", "60%");

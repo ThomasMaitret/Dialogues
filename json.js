@@ -279,8 +279,7 @@ JSONOPTIONS = {
 		},
 		"background":
 		{
-			"fieldClass": "background",
-			"type": "image"
+			"fieldClass": "background"
 		},
 		"characters":
 		{
