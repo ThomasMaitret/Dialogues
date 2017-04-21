@@ -41,7 +41,7 @@ $(document).ready(function()
 			};
 
 			//BACKGROUND
-			{
+			(function(){
 				var i = $(".background").find("input").val();
 				var div = $("<br><div><label>Aperçu</label><br>");
 				var img = $("<img>",
@@ -50,7 +50,7 @@ $(document).ready(function()
 				});
 				img.appendTo(div);
 				$(".background").append(div);
-			}
+			})();
 
 			$(".background").find("input").on("change", function() {
 				$(".background").first().find("img").attr("src", JSONDATA["sources"][$(this).val()].src);
@@ -70,6 +70,7 @@ $(document).ready(function()
 
 				$(this).find(".imagePerso").append(div);
 			});
+
 			$(".personnageDiv").each(function()
 			{
 				var div = $("<div>");
