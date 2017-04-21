@@ -1,6 +1,6 @@
 body {
-  font-family: "Montserrat";
   overflow-x : hidden;
+  font-family: "Montserrat";
 }
 
 textarea {
@@ -8,8 +8,8 @@ textarea {
 }
 
 #form {
-  background   : #eee;
   margin-bottom: 25px;
+  background   : #eee;
 }
 
 .form-control {
@@ -17,20 +17,25 @@ textarea {
 }
 
 .personnageDiv {
+  position  : relative;
   background: #BFBFBF;
+}
+
+.line {
+  position: relative;
 }
 
 .perso1 {
   margin-left: 0;
-  background : #27ae60;
   width      : 49%;
+  background : #27ae60;
   transition : .15s;
 }
 
 .perso2 {
   margin-left: 51%;
-  background : #3498db;
   width      : 49%;
+  background : #3498db;
   transition : .15s;
 }
 
@@ -39,6 +44,19 @@ legend {
 }
 
 .background img {
-  width     : 60%;
   max-height: 500px;
+  width     : 60%;
+}
+
+.closeButton,
+.closeButton:active,
+.closeButton:focus,
+.closeButton:hover {
+  position     : absolute;
+  top          : 0;
+  right        : 0;
+  padding      : 11px;
+  border       : none;
+  border-radius: 0;
+  font-size    : 1.3em;
 }
