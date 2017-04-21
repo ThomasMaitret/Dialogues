@@ -18,6 +18,11 @@ textarea {
 
 .personnageDiv {
   background: #BFBFBF;
+  position: relative;
+}
+
+.line {
+  position: relative;
 }
 
 .perso1 {
@@ -39,6 +44,15 @@ legend {
 }
 
 .background img {
-  width     : 60%;
+  width: 60%;
   max-height: 500px;
+}
+
+.closeButton, .closeButton:hover, .closeButton:focus, .closeButton:active {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  border:none;
+  border-radius: 0;
+  height: 30px;
 }
