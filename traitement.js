@@ -91,7 +91,8 @@ $(document).ready(function()
 
 			$(".line").closest(".alpaca-container").sortable(
 			{
-				scroll: true
+				scrollSpeed: 10,
+				containment: ".alpaca-container"
 			});
 
 			$(".closeButton").each(function()
