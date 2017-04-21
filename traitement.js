@@ -34,8 +34,17 @@ $(document).ready(function()
 				});
 			};
 
-			$("img").addClass("img-responsive");
-
+			$(".background").each(function()
+			{
+				var div = $("<br><div><label>Aperçu</label><br>");
+				var i = $(this).find("input").val();
+				var img = $("<img>",
+				{
+					src: JSONDATA["sources"][i].src
+				});
+				img.appendTo(div);
+				$(this).append(div);
+			});
 			$(".line").each(function()
 			{
 				var div = $("<br><div><label>Aperçu</label><br>");
