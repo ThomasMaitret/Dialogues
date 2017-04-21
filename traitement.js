@@ -86,6 +86,12 @@ $(document).ready(function()
 			});
 			$("img").addClass("img-responsive");
 
+			$(".alpaca-container").sortable(
+			{
+				scroll: true
+			});
+
+
 			/* $("button").click(function()
 			{
 				setTimeout(function()

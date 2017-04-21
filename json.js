@@ -333,5 +333,20 @@ JSONOPTIONS = {
 				}
 			}
 		}
+	},
+	"form":
+	{
+		"buttons":
+		{
+			"submit":
+			{
+				"title": "Valider",
+				"click": function()
+				{
+					var value = this.getValue();
+					alert(JSON.stringify(value, null, "  "));
+				}
+			}
+		}
 	}
 };
