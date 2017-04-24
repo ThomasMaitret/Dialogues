@@ -110,8 +110,9 @@ $(document).ready(function()
 				});
 			});
 
-			$(".personnageDiv").closest(".alpaca-container:last-child").append("<button class='btn btn-default add-item'><span class='glyphicon glyphicon-plus'></span>&nbsp;Ajouter un nouvel élement</button>");
-			$(".lines").last(".line").append("<button class='btn btn-default add-item'><span class='glyphicon glyphicon-plus'></span>&nbsp;Ajouter un nouvel élement</button>");
+			var addItemButton = "<button class='btn btn-default add-item'><span class='glyphicon glyphicon-plus'></span>&nbsp;Ajouter un nouvel élement</button>"
+			$(".personnageDiv").closest(".alpaca-container:last-child").append(addItemButton);
+			$(".lines").last(".line").append(addItemButton);
 		}
 	});
 });
