@@ -4,31 +4,31 @@ JSONDATA = {
 	"sources": [
 	{
 		"id": 0,
-		"src": "img/NormalFille.png"
+		"src": "assets/img/NormalFille.png"
 	},
 	{
 		"id": 1,
-		"src": "img/NormalGars.png"
+		"src": "assets/img/NormalGars.png"
 	},
 	{
 		"id": 2,
-		"src": "img/ContentFille.png"
+		"src": "assets/img/ContentFille.png"
 	},
 	{
 		"id": 3,
-		"src": "img/ContentGars.png"
+		"src": "assets/img/ContentGars.png"
 	},
 	{
 		"id": 4,
-		"src": "img/background.png"
+		"src": "assets/img/background.png"
 	},
 	{
 		"id": 5,
-		"src": "img/bouche.png"
+		"src": "assets/img/bouche.png"
 	},
 	{
 		"id": 6,
-		"src": "img/prof_1.png"
+		"src": "assets/img/prof_1.png"
 	}],
 	"characters": [
 	{
