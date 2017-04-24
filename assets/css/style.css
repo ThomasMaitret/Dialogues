@@ -15,6 +15,10 @@ textarea {
   border-radius: 0;
 }
 
+.add-item {
+  margin-top: 20px;
+}
+
 .personnageDiv {
   position  : relative;
   background: #BFBFBF;
