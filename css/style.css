@@ -9,10 +9,6 @@ body {
   min-height: 80vh;
 }
 
-.sidebar {
-  overflow: scroll;
-}
-
 .section-title {
   background : #bbb;
   color      : #333;
