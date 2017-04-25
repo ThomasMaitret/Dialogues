@@ -60,21 +60,6 @@ JSONDATA = {
 			"nbImg": 4,
 			"imageId": 5
 		}
-	},
-	{
-		"id": 2,
-		"defaultName": "L'Homme Vraiment Perdu",
-		"default": 1,
-		"mouth":
-		{
-			"positions":
-			{
-				"x": 0,
-				"y": 0
-			},
-			"nbImg": 4,
-			"imageId": 5
-		}
 	}],
 	"background": 4,
 	"lines": [
@@ -93,30 +78,6 @@ JSONDATA = {
 		"image": 2,
 		"animation": "bounceIn",
 		"name": "L'Homme Perdu"
-	},
-	{
-		"id": 2,
-		"text": "Humm... oui ce problème est récurrent....",
-		"perso": 1,
-		"image": 3,
-		"animation": "bounce",
-		"name": "L'Homme Perdu"
-	},
-	{
-		"id": 3,
-		"text": "Bah écoutez, passez une bonne journée !",
-		"perso": 1,
-		"image": 3,
-		"animation": "bounceOut",
-		"name": "L'Homme Perdu"
-	},
-	{
-		"id": 4,
-		"text": "Merci ! Au revoir !",
-		"perso": 2,
-		"image": 0,
-		"animation": "bounceOut",
-		"name": "L'Homme perdu"
 	}]
 };
 
@@ -156,7 +117,8 @@ JSONSCHEMA = {
 		{
 			"type": "integer",
 			"minimum": 0,
-			"title": "Arriere-plan"
+			"title": "Arriere-plan",
+			"enum": [4, 5, 6]
 		},
 		"characters":
 		{
@@ -246,7 +208,8 @@ JSONSCHEMA = {
 					{
 						"type": "integer",
 						"minimum": 0,
-						"title": "Image"
+						"title": "Image",
+						"enum": [0, 1, 2, 3]
 					},
 					"animation":
 					{
@@ -279,7 +242,9 @@ JSONOPTIONS = {
 		},
 		"background":
 		{
-			"fieldClass": "background"
+			"fieldClass": "background",
+			"type": "select",
+			"hideNone": "true"
 		},
 		"characters":
 		{
@@ -320,7 +285,8 @@ JSONOPTIONS = {
 				{
 					"image":
 					{
-						"fieldClass": "imagePerso"
+						"fieldClass": "imagePerso",
+						"hideNone": "true"
 					},
 					"perso":
 					{

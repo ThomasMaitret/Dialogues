@@ -13,7 +13,7 @@ $(document).ready(function()
 			{
 				var line = $(".line").parent();
 				var persoInput = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_perso'] input");
-				var persoImage = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_image'] input");
+				var persoImage = $(".lines div[data-alpaca-container-item-name='lines_" + i + "_image'] select");
 				if(persoInput.val() == "1")
 				{
 					persoInput.closest(line).removeClass("perso2").addClass("perso1");
@@ -33,17 +33,17 @@ $(document).ready(function()
 						$(this).closest(line).removeClass("perso1").addClass("perso2");
 					}
 				});
-				persoImage.on("change paste keyup", function()
+				persoImage.on("change", function()
 				{
-					var i = $(this).val();
-					$(".imagePerso img").attr("src", JSONDATA["sources"][i].src);
+					var v = $(this).val();
+					$(this).parent().find("img").attr("src", JSONDATA["sources"][v].src);
 				});
 			};
 
 			//BACKGROUND
 			(function()
 			{
-				var i = $(".background").find("input").val();
+				var i = $(".background").find("select").val();
 				var div = $("<br><div><label>Aperçu</label><br>");
 				var img = $("<img>",
 				{
@@ -53,7 +53,7 @@ $(document).ready(function()
 				$(".background").append(div);
 			})();
 
-			$(".background").find("input").on("change paste keyup", function()
+			$(".background").find("select").on("change", function()
 			{
 				$(".background").first().find("img").attr("src", JSONDATA["sources"][$(this).val()].src);
 			});
@@ -63,7 +63,7 @@ $(document).ready(function()
 			$(".line").each(function()
 			{
 				var div = $("<br><div><label>Aperçu</label><br>");
-				var i = $(this).find(".imagePerso input").val();
+				var i = $(this).find(".imagePerso select").val();
 				var img = $("<img>",
 				{
 					src: JSONDATA["sources"][i].src
